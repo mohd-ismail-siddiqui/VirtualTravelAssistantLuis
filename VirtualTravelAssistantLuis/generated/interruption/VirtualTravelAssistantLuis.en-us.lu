@@ -1,0 +1,44 @@
+
+> LUIS application information
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 3.2.0
+
+
+> # Intent definitions
+
+# RaiseATravelRequest
+- raise a travel request
+- travel request
+
+
+# GetTripType
+- One Way
+- Round
+
+
+> # Entity definitions
+
+@ ml TravelRequest
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+@ list TripTypes = 
+	- One Way :
+		- One sided
+	- Round :
+		- two sided
+		- both way
+		- return
+
+
+> # RegEx entities
+
+
