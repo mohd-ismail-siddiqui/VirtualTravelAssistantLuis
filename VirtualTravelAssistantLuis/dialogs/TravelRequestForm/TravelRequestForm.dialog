@@ -1,0 +1,61 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "uFDPrU",
+    "name": "TravelRequestForm",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "B5nSzG"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.AttachmentInput",
+          "$designer": {
+            "id": "JR6rYJ"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${AttachmentInput_Prompt_JR6rYJ()}",
+          "value": {
+            "contentType": "json"
+          }
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "YH3hzH"
+          },
+          "assignments": [
+            {
+              "property": "user.TravelRequest.DestinationCountry",
+              "value": "=turn.activity.value.Country"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0zJOin"
+          },
+          "activity": "${SendActivity_0zJOin()}"
+        }
+      ]
+    }
+  ],
+  "generator": "TravelRequestForm.lg",
+  "recognizer": "TravelRequestForm.lu.qna",
+  "id": "TravelRequestForm"
+}

@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_VirtualTravelAssistantLuis",
+  "recognizers": {
+    "en-us": "VirtualTravelAssistantLuis.en-us.lu",
+    "": "VirtualTravelAssistantLuis.en-us.lu"
+  }
+}

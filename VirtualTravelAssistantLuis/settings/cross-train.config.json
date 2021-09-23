@@ -1,0 +1,11 @@
+{
+  "VirtualTravelAssistantLuis.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "RaiseATravelRequest": "",
+      "GetTripType": [
+        "TravelRequestForm.en-us"
+      ]
+    }
+  }
+}

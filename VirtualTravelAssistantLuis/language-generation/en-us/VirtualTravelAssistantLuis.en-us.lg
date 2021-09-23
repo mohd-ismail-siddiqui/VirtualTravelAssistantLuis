@@ -1,0 +1,85 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Hi! I’m Sarah, your Virtual Travel Assistant.
+- Welcome to Virtual Travel Assitant. Hi I am Sarah.
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_W9HiSQ()
+[Activity
+    Text = ${SendActivity_W9HiSQ_text()}
+]
+
+# SendActivity_W9HiSQ_text()
+- Sure, I will help you with that!
+# TravelType()
+-- SWITCH: ${TravelType}
+-- CASE: ${0}
+    - Domestic
+-- CASE: ${1}
+    - International
+# TripType()
+-- SWITCH: ${TripType}
+-- CASE: ${0}
+    - One Way
+-- CASE: ${1}
+    - Round
+# ChoiceInput_Prompt_vtrAfm()
+[Activity
+    Text = ${ChoiceInput_Prompt_vtrAfm_text()}
+]
+
+# ChoiceInput_Prompt_vtrAfm_text()
+- Please select -
+# ChoiceInput_Prompt_rWREeN()
+[Activity
+    Text = ${ChoiceInput_Prompt_rWREeN_text()}
+]
+
+# ChoiceInput_Prompt_rWREeN_text()
+- Please Select -
+# TextInput_Prompt_rvOaMY()
+[Activity
+    Text = ${TextInput_Prompt_rvOaMY_text()}
+]
+
+# TextInput_Prompt_rvOaMY_text()
+- Please enter Destination Country
+# TextInput_Prompt_sutbpz()
+[Activity
+    Text = ${TextInput_Prompt_sutbpz_text()}
+]
+
+# TextInput_Prompt_sutbpz_text()
+- Please enter Destination City
+# DateTimeInput_Prompt_ZpSiV9()
+[Activity
+    Text = ${DateTimeInput_Prompt_ZpSiV9_text()}
+]
+
+# DateTimeInput_Prompt_ZpSiV9_text()
+- Please enter Travel Date
+# DateTimeInput_Prompt_Ug5don()
+[Activity
+    Text = ${DateTimeInput_Prompt_Ug5don_text()}
+]
+
+# DateTimeInput_Prompt_Ug5don_text()
+- Please enter Return Date
+# SendActivity_p87xi1()
+[Activity
+    Text = ${SendActivity_p87xi1_text()}
+]
+
+# SendActivity_p87xi1_text()
+- ${user.TravelRequest}

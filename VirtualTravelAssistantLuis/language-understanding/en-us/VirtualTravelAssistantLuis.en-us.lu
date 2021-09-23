@@ -1,0 +1,17 @@
+
+# RaiseATravelRequest
+- raise a travel request
+- travel request
+
+@ ml TravelRequest
+# GetTripType
+- One Way
+- Round
+
+@ list TripTypes =
+	- One Way :
+		- One sided
+	- Round :
+		- two sided
+		- both way
+		- return

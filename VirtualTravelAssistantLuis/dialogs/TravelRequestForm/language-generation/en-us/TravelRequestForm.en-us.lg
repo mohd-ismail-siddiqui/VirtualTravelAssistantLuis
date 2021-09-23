@@ -1,0 +1,86 @@
+[import](common.lg)
+
+# SendActivity_0zJOin()
+[Activity
+    Text = ${SendActivity_0zJOin_text()}
+]
+
+# SendActivity_0zJOin_text()
+- ${user.TravelRequest}
+# AttachmentInput_Prompt_JR6rYJ()
+[Activity
+    Attachments = ${json(AttachmentInput_Prompt_JR6rYJ_attachment_a3Jvgl())}
+]
+
+# AttachmentInput_Prompt_JR6rYJ_attachment_a3Jvgl()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "speak": "Please let me know the destination country.",
+    "body": [
+		{
+            "type": "TextBlock",
+            "text": "Which country you want to travel?",
+            "wrap": true
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Country",
+            "id": "Country"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Which city you want to travel?",
+            "wrap": true
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "City",
+            "id": "City"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Travel Date:",
+            "fontType": "Default",
+            "size": "Small",
+            "weight": "Bolder",
+            "color": "Dark"
+        },
+        {
+            "type": "Input.Date",
+            "spacing": "None",
+            "id": "TravelDate"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Return Date:",
+            "fontType": "Default",
+            "color": "Dark",
+            "size": "Small",
+            "weight": "Bolder"
+        },
+        {
+            "type": "Input.Date",
+            "id": "ReturnDate",
+            "spacing": "None"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "requiredInputs": [
+            "Country","City","TravelDate","ReturnDate"
+             ],
+            "data": {
+                "FormName": "InternationalRoundTripForm",
+                "Language": "en"
+            }
+        }
+    ]
+}
+```
